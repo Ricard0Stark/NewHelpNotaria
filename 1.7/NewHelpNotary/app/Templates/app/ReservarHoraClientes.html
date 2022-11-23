@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{% static 'app/css/diseno.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'app/css/contacto.css' %}" type="text/css">
+
+
+{% endblock %}
+
+
+{% block contenido %}      
+<div class="contenido">
+    <div class="reservar-wrapper">
+        <div class="reservar-form">
+            <h1 class="logo">Reservar Hora <span>Online</span> </h1>
+
+            <form action="" class="" id="Reservar_Hora">
+                <p class="block"><label for="FechaReserva">Fecha Reserva</label> <input type="date" id="FechaReserva" name="FechaReserva"></p>
+                <p><label for="Nombre">Nombre</label><input type="text" id="Nombre" name="Nombre" placeholder="Nombre"></p>
+                <p><label for="Apellido">Apellido</label> <input type="text" id="Apellido" name="Apellido" placeholder="Apellido"> </p>
+                <p> <label for="email">Email</label> <input type="email" id="email" name="email" placeholder="tu@email.cl"> </p>
+                <p><label for="telefono">Telefono</label> <input type="number" name="telefono" id="telefono" placeholder="956274248"></p> 
+                <p class=""> <label for="tipoconsulta">Tipo Reserva</label> 
+                    <select name="tipoconsulta" id="tipoconsulta">
+                        <option value="">seleccionar</option>
+                        <option value="consulta">consulta</option>
+                        <option value="reclamo">reclamo</option>
+                        <option value="sugerencia">sugerencia</option>
+                        <option value="felicitaciones">felicitaciones</option>
+                    </select>
+                    </p>
+                <p class="block"> <a href="#"><button type="button" id="btnEnviar" class="button">Pagar ahora</button> </a> </p> 
+
+            </form>
+
+        </div>
+    
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
